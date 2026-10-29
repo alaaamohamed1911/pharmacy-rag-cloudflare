@@ -1,0 +1,5 @@
+node_modules/
+.wrangler/
+.dev.vars
+scripts/kb_index.json
+__pycache__/

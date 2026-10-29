@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pharmacy-rag",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // The Worker handles /api/* and /kb/* first (KB files stay private); everything else is served as static files.
+    "run_worker_first": ["/api/*", "/kb/*"]
+  },
+  "observability": { "enabled": true }
+
+  // Optional abuse protection (uncomment, then redeploy):
+  // ,"ratelimits": [
+  //   { "name": "RATE_LIMITER", "namespace_id": "1001", "simple": { "limit": 10, "period": 60 } }
+  // ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "pharmacy-rag",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build:kb": "python3 scripts/build_kb.py scripts/kb_index.json"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}

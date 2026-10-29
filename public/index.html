@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مساعد الصيدلية الذكي</title>
+<meta name="description" content="مساعد يجاوب من قاعدة معرفة أدوية شائعة في مصر ووثائق مختارة من هيئة الدواء المصرية.">
+<meta name="theme-color" content="#12352f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312352f'/%3E%3Cg transform='rotate(-45 16 16)'%3E%3Crect x='6' y='11' width='20' height='10' rx='5' fill='%23fff'/%3E%3Cpath d='M16 11h5a5 5 0 010 10h-5z' fill='%23e0902c'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g transform="rotate(-45 16 16)"><rect x="4" y="10" width="24" height="12" rx="6" fill="currentColor" opacity=".16"/><rect x="4" y="10" width="24" height="12" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 10h6a6 6 0 010 12h-6z" fill="var(--amber)"/></g></svg>
+      <div>
+        <h1>مساعد الصيدلية الذكي</h1>
+        <p>إجابات من أدوية شائعة في مصر ووثائق مختارة من هيئة الدواء المصرية</p>
+      </div>
+    </div>
+    <button id="newChat" class="ghost" type="button" hidden>محادثة جديدة</button>
+  </header>
+
+  <main id="chat" class="chat" aria-live="polite" aria-label="المحادثة">
+    <section id="empty" class="empty">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-45 60 60)"><rect x="14" y="40" width="92" height="40" rx="20" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><path d="M60 40h26a20 20 0 010 40H60z" fill="var(--amber)"/><path d="M60 40v40" stroke="var(--ink)" stroke-width="3"/></g></svg>
+      <h2>اسأل عن أي دواء</h2>
+      <p>التداخلات الدوائية، موانع الاستعمال، تصنيف الأدوية بدون روشتة، أو أي معلومة في وثائق هيئة الدواء.</p>
+    </section>
+  </main>
+
+  <footer class="composer-wrap">
+    <form id="form" class="composer" autocomplete="off">
+      <label for="q" class="sr">سؤالك</label>
+      <textarea id="q" rows="1" maxlength="600" placeholder="اكتب سؤالك عن دواء…" enterkeyhint="send"></textarea>
+      <button id="send" type="submit" aria-label="إرسال" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </form>
+    <p class="disclaimer">للمعلومات المرجعية فقط، ومش بديل عن استشارة صيدلي أو طبيب مرخّص.</p>
+  </footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
